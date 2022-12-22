@@ -1,0 +1,276 @@
+A Turing Machine with 2 tapes and blank char _
+State 0: 
+{ ['_', None] =>  1 [S , S ]
+  [None, None] =>  2 [S , R_]
+}
+State 1: 
+Accept
+State 2: 
+{ ['_', None] => 18 [S , L ]
+  ['a', None] =>  3 [R_, S ]
+  ['b', None] =>  5 [R_, S ]
+  ['c', None] =>  7 [R_, S ]
+}
+State 3: 
+{ ['a', None] =>  3 [R , S ]
+  ['b', None] =>  3 [R , S ]
+  ['c', None] =>  3 [R , S ]
+  ['_', None] =>  4 [L , S ]
+}
+State 4: 
+{ ['a', None] =>  9 [L_, Ra]
+}
+State 5: 
+{ ['a', None] =>  5 [R , S ]
+  ['b', None] =>  5 [R , S ]
+  ['c', None] =>  5 [R , S ]
+  ['_', None] =>  6 [L , S ]
+}
+State 6: 
+{ ['b', None] =>  9 [L_, Rb]
+}
+State 7: 
+{ ['a', None] =>  7 [R , S ]
+  ['b', None] =>  7 [R , S ]
+  ['c', None] =>  7 [R , S ]
+  ['_', None] =>  8 [L , S ]
+}
+State 8: 
+{ ['c', None] =>  9 [L_, Rc]
+}
+State 9: 
+{ ['_', None] =>  2 [R_, S ]
+  [None, None] =>  9 [L , S ]
+}
+State 10: 
+{ [None, '_'] =>  1 [S , S ]
+  ['_', 'a'] => 11 [S , R_]
+  ['_', 'b'] => 13 [S , R_]
+  ['_', 'c'] => 15 [S , R_]
+}
+State 11: 
+{ [None, 'a'] => 11 [S , R ]
+  [None, 'b'] => 11 [S , R ]
+  [None, 'c'] => 11 [S , R ]
+  [None, '_'] => 12 [S , L ]
+}
+State 12: 
+{ [None, 'a'] => 17 [S , L_]
+}
+State 13: 
+{ [None, 'a'] => 13 [S , R ]
+  [None, 'b'] => 13 [S , R ]
+  [None, 'c'] => 13 [S , R ]
+  [None, '_'] => 14 [S , L ]
+}
+State 14: 
+{ [None, 'b'] => 17 [S , L_]
+}
+State 15: 
+{ [None, 'a'] => 15 [S , R ]
+  [None, 'b'] => 15 [S , R ]
+  [None, 'c'] => 15 [S , R ]
+  [None, '_'] => 16 [S , L ]
+}
+State 16: 
+{ [None, 'c'] => 17 [S , L_]
+}
+State 17: 
+{ [None, '_'] => 10 [S , R ]
+  [None, None] => 17 [S , L ]
+}
+State 18: 
+{ [None, '_'] => 10 [S , R ]
+  [None, None] => 18 [S , L ]
+}
+The TM is in state 0
+Tape  0 has abccba
+            ^
+Tape  1 has _
+            ^
+The TM is in state 2
+Tape  0 has abccba
+            ^
+Tape  1 has __
+             ^
+The TM is in state 3
+Tape  0 has _bccba
+             ^
+Tape  1 has __
+             ^
+The TM is in state 3
+Tape  0 has _bccba
+              ^
+Tape  1 has __
+             ^
+The TM is in state 3
+Tape  0 has _bccba
+               ^
+Tape  1 has __
+             ^
+The TM is in state 3
+Tape  0 has _bccba
+                ^
+Tape  1 has __
+             ^
+The TM is in state 3
+Tape  0 has _bccba
+                 ^
+Tape  1 has __
+             ^
+The TM is in state 3
+Tape  0 has _bccba_
+                  ^
+Tape  1 has __
+             ^
+The TM is in state 4
+Tape  0 has _bccba_
+                 ^
+Tape  1 has __
+             ^
+The TM is in state 9
+Tape  0 has _bccb__
+                ^
+Tape  1 has _a_
+              ^
+The TM is in state 9
+Tape  0 has _bccb__
+               ^
+Tape  1 has _a_
+              ^
+The TM is in state 9
+Tape  0 has _bccb__
+              ^
+Tape  1 has _a_
+              ^
+The TM is in state 9
+Tape  0 has _bccb__
+             ^
+Tape  1 has _a_
+              ^
+The TM is in state 9
+Tape  0 has _bccb__
+            ^
+Tape  1 has _a_
+              ^
+The TM is in state 2
+Tape  0 has _bccb__
+             ^
+Tape  1 has _a_
+              ^
+The TM is in state 5
+Tape  0 has __ccb__
+              ^
+Tape  1 has _a_
+              ^
+The TM is in state 5
+Tape  0 has __ccb__
+               ^
+Tape  1 has _a_
+              ^
+The TM is in state 5
+Tape  0 has __ccb__
+                ^
+Tape  1 has _a_
+              ^
+The TM is in state 5
+Tape  0 has __ccb__
+                 ^
+Tape  1 has _a_
+              ^
+The TM is in state 6
+Tape  0 has __ccb__
+                ^
+Tape  1 has _a_
+              ^
+The TM is in state 9
+Tape  0 has __cc___
+               ^
+Tape  1 has _ab_
+               ^
+The TM is in state 9
+Tape  0 has __cc___
+              ^
+Tape  1 has _ab_
+               ^
+The TM is in state 9
+Tape  0 has __cc___
+             ^
+Tape  1 has _ab_
+               ^
+The TM is in state 2
+Tape  0 has __cc___
+              ^
+Tape  1 has _ab_
+               ^
+The TM is in state 7
+Tape  0 has ___c___
+               ^
+Tape  1 has _ab_
+               ^
+The TM is in state 7
+Tape  0 has ___c___
+                ^
+Tape  1 has _ab_
+               ^
+The TM is in state 8
+Tape  0 has ___c___
+               ^
+Tape  1 has _ab_
+               ^
+The TM is in state 9
+Tape  0 has _______
+              ^
+Tape  1 has _abc_
+                ^
+The TM is in state 2
+Tape  0 has _______
+               ^
+Tape  1 has _abc_
+                ^
+The TM is in state 18
+Tape  0 has _______
+               ^
+Tape  1 has _abc_
+               ^
+The TM is in state 18
+Tape  0 has _______
+               ^
+Tape  1 has _abc_
+              ^
+The TM is in state 18
+Tape  0 has _______
+               ^
+Tape  1 has _abc_
+             ^
+The TM is in state 18
+Tape  0 has _______
+               ^
+Tape  1 has _abc_
+            ^
+The TM is in state 10
+Tape  0 has _______
+               ^
+Tape  1 has _abc_
+             ^
+The TM is in state 11
+Tape  0 has _______
+               ^
+Tape  1 has __bc_
+              ^
+The TM is in state 11
+Tape  0 has _______
+               ^
+Tape  1 has __bc_
+               ^
+The TM is in state 11
+Tape  0 has _______
+               ^
+Tape  1 has __bc_
+                ^
+The TM is in state 12
+Tape  0 has _______
+               ^
+Tape  1 has __bc_
+               ^
+Answer: False

@@ -1,0 +1,196 @@
+A Turing Machine with 3 tapes and blank char _
+State 0: 
+{ ['_', None, None] =>  3 [S , S , S ]
+  [None, None, None] =>  1 [S , R , R ]
+}
+State 1: 
+{ ['A', None, None] =>  1 [R_, R1, S ]
+  ['B', None, None] =>  1 [R_, S , R1]
+  ['C', None, None] =>  2 [R_, S , R1]
+  ['_', None, None] =>  4 [S , L , L ]
+}
+State 2: 
+{ [None, None, None] =>  1 [S , S , R1]
+}
+State 3: 
+Accept
+State 4: 
+{ [None, '1', '1'] =>  4 [S , L_, L_]
+  [None, '_', '_'] =>  3 [S , S , S ]
+}
+The TM is in state 0
+Tape  0 has ACAAAABAACC
+            ^
+Tape  1 has _
+            ^
+Tape  2 has _
+            ^
+The TM is in state 1
+Tape  0 has ACAAAABAACC
+            ^
+Tape  1 has __
+             ^
+Tape  2 has __
+             ^
+The TM is in state 1
+Tape  0 has _CAAAABAACC
+             ^
+Tape  1 has _1_
+              ^
+Tape  2 has __
+             ^
+The TM is in state 2
+Tape  0 has __AAAABAACC
+              ^
+Tape  1 has _1_
+              ^
+Tape  2 has _1_
+              ^
+The TM is in state 1
+Tape  0 has __AAAABAACC
+              ^
+Tape  1 has _1_
+              ^
+Tape  2 has _11_
+               ^
+The TM is in state 1
+Tape  0 has ___AAABAACC
+               ^
+Tape  1 has _11_
+               ^
+Tape  2 has _11_
+               ^
+The TM is in state 1
+Tape  0 has ____AABAACC
+                ^
+Tape  1 has _111_
+                ^
+Tape  2 has _11_
+               ^
+The TM is in state 1
+Tape  0 has _____ABAACC
+                 ^
+Tape  1 has _1111_
+                 ^
+Tape  2 has _11_
+               ^
+The TM is in state 1
+Tape  0 has ______BAACC
+                  ^
+Tape  1 has _11111_
+                  ^
+Tape  2 has _11_
+               ^
+The TM is in state 1
+Tape  0 has _______AACC
+                   ^
+Tape  1 has _11111_
+                  ^
+Tape  2 has _111_
+                ^
+The TM is in state 1
+Tape  0 has ________ACC
+                    ^
+Tape  1 has _111111_
+                   ^
+Tape  2 has _111_
+                ^
+The TM is in state 1
+Tape  0 has _________CC
+                     ^
+Tape  1 has _1111111_
+                    ^
+Tape  2 has _111_
+                ^
+The TM is in state 2
+Tape  0 has __________C
+                      ^
+Tape  1 has _1111111_
+                    ^
+Tape  2 has _1111_
+                 ^
+The TM is in state 1
+Tape  0 has __________C
+                      ^
+Tape  1 has _1111111_
+                    ^
+Tape  2 has _11111_
+                  ^
+The TM is in state 2
+Tape  0 has ____________
+                       ^
+Tape  1 has _1111111_
+                    ^
+Tape  2 has _111111_
+                   ^
+The TM is in state 1
+Tape  0 has ____________
+                       ^
+Tape  1 has _1111111_
+                    ^
+Tape  2 has _1111111_
+                    ^
+The TM is in state 4
+Tape  0 has ____________
+                       ^
+Tape  1 has _1111111_
+                   ^
+Tape  2 has _1111111_
+                   ^
+The TM is in state 4
+Tape  0 has ____________
+                       ^
+Tape  1 has _111111__
+                  ^
+Tape  2 has _111111__
+                  ^
+The TM is in state 4
+Tape  0 has ____________
+                       ^
+Tape  1 has _11111___
+                 ^
+Tape  2 has _11111___
+                 ^
+The TM is in state 4
+Tape  0 has ____________
+                       ^
+Tape  1 has _1111____
+                ^
+Tape  2 has _1111____
+                ^
+The TM is in state 4
+Tape  0 has ____________
+                       ^
+Tape  1 has _111_____
+               ^
+Tape  2 has _111_____
+               ^
+The TM is in state 4
+Tape  0 has ____________
+                       ^
+Tape  1 has _11______
+              ^
+Tape  2 has _11______
+              ^
+The TM is in state 4
+Tape  0 has ____________
+                       ^
+Tape  1 has _1_______
+             ^
+Tape  2 has _1_______
+             ^
+The TM is in state 4
+Tape  0 has ____________
+                       ^
+Tape  1 has _________
+            ^
+Tape  2 has _________
+            ^
+The TM is in state 3
+Tape  0 has ____________
+                       ^
+Tape  1 has _________
+            ^
+Tape  2 has _________
+            ^
+Answer: True

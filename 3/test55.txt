@@ -1,0 +1,71 @@
+A Turing Machine with 3 tapes and blank char _
+State 0: 
+{ ['A', None, None] =>  0 [R , R1, S ]
+  ['B', None, None] =>  0 [R , S , R1]
+  ['C', None, None] =>  0 [R , S , R2]
+  ['_', '_', '_'] =>  1 [L , L , L ]
+}
+State 1: 
+{ [None, '1', '1'] =>  1 [S , L_, L_]
+  [None, '1', '2'] =>  1 [S , L_, S1]
+  [None, '_', '_'] =>  2 [S , S , S ]
+}
+State 2: 
+Accept
+The TM is in state 0
+Tape  0 has ACAA
+            ^
+Tape  1 has _
+            ^
+Tape  2 has _
+            ^
+The TM is in state 0
+Tape  0 has ACAA
+             ^
+Tape  1 has 1_
+             ^
+Tape  2 has _
+            ^
+The TM is in state 0
+Tape  0 has ACAA
+              ^
+Tape  1 has 1_
+             ^
+Tape  2 has 2_
+             ^
+The TM is in state 0
+Tape  0 has ACAA
+               ^
+Tape  1 has 11_
+              ^
+Tape  2 has 2_
+             ^
+The TM is in state 0
+Tape  0 has ACAA_
+                ^
+Tape  1 has 111_
+               ^
+Tape  2 has 2_
+             ^
+The TM is in state 1
+Tape  0 has ACAA_
+               ^
+Tape  1 has 111_
+              ^
+Tape  2 has 2_
+            ^
+The TM is in state 1
+Tape  0 has ACAA_
+               ^
+Tape  1 has 11__
+             ^
+Tape  2 has 1_
+            ^
+The TM is in state 1
+Tape  0 has ACAA_
+               ^
+Tape  1 has 1___
+            ^
+Tape  2 has __
+            ^
+Answer: False

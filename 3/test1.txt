@@ -1,0 +1,426 @@
+A Turing Machine with 3 tapes and blank char _
+State 0: 
+{ ['A', None, None] =>  1 [R_, S , S ]
+  ['B', None, None] =>  2 [R_, S , S ]
+  ['C', None, None] =>  3 [R_, S , S ]
+  ['_', None, None] =>  4 [S , S , S ]
+}
+State 1: 
+{ ['A', None, None] =>  1 [RA, S , S ]
+  ['B', None, None] =>  2 [RA, S , S ]
+  ['C', None, None] =>  3 [RA, S , S ]
+  ['_', None, None] =>  5 [LA, S , S ]
+}
+State 2: 
+{ ['A', None, None] =>  1 [RB, S , S ]
+  ['B', None, None] =>  2 [RB, S , S ]
+  ['C', None, None] =>  3 [RB, S , S ]
+  ['_', None, None] =>  5 [LB, S , S ]
+}
+State 3: 
+{ ['A', None, None] =>  1 [RC, S , S ]
+  ['B', None, None] =>  2 [RC, S , S ]
+  ['C', None, None] =>  3 [RC, S , S ]
+  ['_', None, None] =>  5 [LC, S , S ]
+}
+State 4: 
+Reject
+State 5: 
+{ ['A', None, None] =>  5 [LA, S , S ]
+  ['B', None, None] =>  5 [LB, S , S ]
+  ['C', None, None] =>  5 [LC, S , S ]
+  ['_', None, None] =>  6 [R_, R_, R_]
+}
+State 6: 
+{ ['A', None, None] =>  6 [RA, R1, S ]
+  ['B', None, None] =>  6 [RB, S , R1]
+  ['C', None, None] =>  7 [RC, S , R1]
+  ['_', None, None] =>  8 [L , L , L ]
+}
+State 7: 
+{ [None, None, None] =>  6 [S , S , R1]
+}
+State 8: 
+{ [None, '1', '1'] =>  8 [S , L , L ]
+  [None, '1', '_'] =>  4 [S , S , S ]
+  [None, '_', '1'] =>  4 [S , S , S ]
+  [None, '_', '_'] =>  9 [S , S , S ]
+}
+State 9: 
+Accept
+The TM is in state 0
+Tape  0 has ACAAAABAACC
+            ^
+Tape  1 has _
+            ^
+Tape  2 has _
+            ^
+[(['A', None, None], <__main__.Transition object at 0x7fd153e3b400>), (['B', None, None], <__main__.Transition object at 0x7fd153e3b3a0>), (['C', None, None], <__main__.Transition object at 0x7fd153e3b310>), (['_', None, None], <__main__.Transition object at 0x7fd153e3b2b0>)]
+The TM is in state 1
+Tape  0 has _CAAAABAACC
+             ^
+Tape  1 has _
+            ^
+Tape  2 has _
+            ^
+[(['A', None, None], <__main__.Transition object at 0x7fd153e3b1f0>), (['B', None, None], <__main__.Transition object at 0x7fd153e3b190>), (['C', None, None], <__main__.Transition object at 0x7fd153e3b130>), (['_', None, None], <__main__.Transition object at 0x7fd153e3b0d0>)]
+The TM is in state 3
+Tape  0 has _AAAAABAACC
+              ^
+Tape  1 has _
+            ^
+Tape  2 has _
+            ^
+[(['A', None, None], <__main__.Transition object at 0x7fd153e2fdc0>), (['B', None, None], <__main__.Transition object at 0x7fd153e2fd60>), (['C', None, None], <__main__.Transition object at 0x7fd153e2fd00>), (['_', None, None], <__main__.Transition object at 0x7fd153e2fca0>)]
+The TM is in state 1
+Tape  0 has _ACAAABAACC
+               ^
+Tape  1 has _
+            ^
+Tape  2 has _
+            ^
+[(['A', None, None], <__main__.Transition object at 0x7fd153e3b1f0>), (['B', None, None], <__main__.Transition object at 0x7fd153e3b190>), (['C', None, None], <__main__.Transition object at 0x7fd153e3b130>), (['_', None, None], <__main__.Transition object at 0x7fd153e3b0d0>)]
+The TM is in state 1
+Tape  0 has _ACAAABAACC
+                ^
+Tape  1 has _
+            ^
+Tape  2 has _
+            ^
+[(['A', None, None], <__main__.Transition object at 0x7fd153e3b1f0>), (['B', None, None], <__main__.Transition object at 0x7fd153e3b190>), (['C', None, None], <__main__.Transition object at 0x7fd153e3b130>), (['_', None, None], <__main__.Transition object at 0x7fd153e3b0d0>)]
+The TM is in state 1
+Tape  0 has _ACAAABAACC
+                 ^
+Tape  1 has _
+            ^
+Tape  2 has _
+            ^
+[(['A', None, None], <__main__.Transition object at 0x7fd153e3b1f0>), (['B', None, None], <__main__.Transition object at 0x7fd153e3b190>), (['C', None, None], <__main__.Transition object at 0x7fd153e3b130>), (['_', None, None], <__main__.Transition object at 0x7fd153e3b0d0>)]
+The TM is in state 1
+Tape  0 has _ACAAABAACC
+                  ^
+Tape  1 has _
+            ^
+Tape  2 has _
+            ^
+[(['A', None, None], <__main__.Transition object at 0x7fd153e3b1f0>), (['B', None, None], <__main__.Transition object at 0x7fd153e3b190>), (['C', None, None], <__main__.Transition object at 0x7fd153e3b130>), (['_', None, None], <__main__.Transition object at 0x7fd153e3b0d0>)]
+The TM is in state 2
+Tape  0 has _ACAAAAAACC
+                   ^
+Tape  1 has _
+            ^
+Tape  2 has _
+            ^
+[(['A', None, None], <__main__.Transition object at 0x7fd153e2ffa0>), (['B', None, None], <__main__.Transition object at 0x7fd153e2ff40>), (['C', None, None], <__main__.Transition object at 0x7fd153e2fee0>), (['_', None, None], <__main__.Transition object at 0x7fd153e2fe80>)]
+The TM is in state 1
+Tape  0 has _ACAAAABACC
+                    ^
+Tape  1 has _
+            ^
+Tape  2 has _
+            ^
+[(['A', None, None], <__main__.Transition object at 0x7fd153e3b1f0>), (['B', None, None], <__main__.Transition object at 0x7fd153e3b190>), (['C', None, None], <__main__.Transition object at 0x7fd153e3b130>), (['_', None, None], <__main__.Transition object at 0x7fd153e3b0d0>)]
+The TM is in state 1
+Tape  0 has _ACAAAABACC
+                     ^
+Tape  1 has _
+            ^
+Tape  2 has _
+            ^
+[(['A', None, None], <__main__.Transition object at 0x7fd153e3b1f0>), (['B', None, None], <__main__.Transition object at 0x7fd153e3b190>), (['C', None, None], <__main__.Transition object at 0x7fd153e3b130>), (['_', None, None], <__main__.Transition object at 0x7fd153e3b0d0>)]
+The TM is in state 3
+Tape  0 has _ACAAAABAAC
+                      ^
+Tape  1 has _
+            ^
+Tape  2 has _
+            ^
+[(['A', None, None], <__main__.Transition object at 0x7fd153e2fdc0>), (['B', None, None], <__main__.Transition object at 0x7fd153e2fd60>), (['C', None, None], <__main__.Transition object at 0x7fd153e2fd00>), (['_', None, None], <__main__.Transition object at 0x7fd153e2fca0>)]
+The TM is in state 3
+Tape  0 has _ACAAAABAAC_
+                       ^
+Tape  1 has _
+            ^
+Tape  2 has _
+            ^
+[(['A', None, None], <__main__.Transition object at 0x7fd153e2fdc0>), (['B', None, None], <__main__.Transition object at 0x7fd153e2fd60>), (['C', None, None], <__main__.Transition object at 0x7fd153e2fd00>), (['_', None, None], <__main__.Transition object at 0x7fd153e2fca0>)]
+The TM is in state 5
+Tape  0 has _ACAAAABAACC
+                      ^
+Tape  1 has _
+            ^
+Tape  2 has _
+            ^
+[(['A', None, None], <__main__.Transition object at 0x7fd153e2fb80>), (['B', None, None], <__main__.Transition object at 0x7fd153e2fb20>), (['C', None, None], <__main__.Transition object at 0x7fd153e2fac0>), (['_', None, None], <__main__.Transition object at 0x7fd153e2fa60>)]
+The TM is in state 5
+Tape  0 has _ACAAAABAACC
+                     ^
+Tape  1 has _
+            ^
+Tape  2 has _
+            ^
+[(['A', None, None], <__main__.Transition object at 0x7fd153e2fb80>), (['B', None, None], <__main__.Transition object at 0x7fd153e2fb20>), (['C', None, None], <__main__.Transition object at 0x7fd153e2fac0>), (['_', None, None], <__main__.Transition object at 0x7fd153e2fa60>)]
+The TM is in state 5
+Tape  0 has _ACAAAABAACC
+                    ^
+Tape  1 has _
+            ^
+Tape  2 has _
+            ^
+[(['A', None, None], <__main__.Transition object at 0x7fd153e2fb80>), (['B', None, None], <__main__.Transition object at 0x7fd153e2fb20>), (['C', None, None], <__main__.Transition object at 0x7fd153e2fac0>), (['_', None, None], <__main__.Transition object at 0x7fd153e2fa60>)]
+The TM is in state 5
+Tape  0 has _ACAAAABAACC
+                   ^
+Tape  1 has _
+            ^
+Tape  2 has _
+            ^
+[(['A', None, None], <__main__.Transition object at 0x7fd153e2fb80>), (['B', None, None], <__main__.Transition object at 0x7fd153e2fb20>), (['C', None, None], <__main__.Transition object at 0x7fd153e2fac0>), (['_', None, None], <__main__.Transition object at 0x7fd153e2fa60>)]
+The TM is in state 5
+Tape  0 has _ACAAAABAACC
+                  ^
+Tape  1 has _
+            ^
+Tape  2 has _
+            ^
+[(['A', None, None], <__main__.Transition object at 0x7fd153e2fb80>), (['B', None, None], <__main__.Transition object at 0x7fd153e2fb20>), (['C', None, None], <__main__.Transition object at 0x7fd153e2fac0>), (['_', None, None], <__main__.Transition object at 0x7fd153e2fa60>)]
+The TM is in state 5
+Tape  0 has _ACAAAABAACC
+                 ^
+Tape  1 has _
+            ^
+Tape  2 has _
+            ^
+[(['A', None, None], <__main__.Transition object at 0x7fd153e2fb80>), (['B', None, None], <__main__.Transition object at 0x7fd153e2fb20>), (['C', None, None], <__main__.Transition object at 0x7fd153e2fac0>), (['_', None, None], <__main__.Transition object at 0x7fd153e2fa60>)]
+The TM is in state 5
+Tape  0 has _ACAAAABAACC
+                ^
+Tape  1 has _
+            ^
+Tape  2 has _
+            ^
+[(['A', None, None], <__main__.Transition object at 0x7fd153e2fb80>), (['B', None, None], <__main__.Transition object at 0x7fd153e2fb20>), (['C', None, None], <__main__.Transition object at 0x7fd153e2fac0>), (['_', None, None], <__main__.Transition object at 0x7fd153e2fa60>)]
+The TM is in state 5
+Tape  0 has _ACAAAABAACC
+               ^
+Tape  1 has _
+            ^
+Tape  2 has _
+            ^
+[(['A', None, None], <__main__.Transition object at 0x7fd153e2fb80>), (['B', None, None], <__main__.Transition object at 0x7fd153e2fb20>), (['C', None, None], <__main__.Transition object at 0x7fd153e2fac0>), (['_', None, None], <__main__.Transition object at 0x7fd153e2fa60>)]
+The TM is in state 5
+Tape  0 has _ACAAAABAACC
+              ^
+Tape  1 has _
+            ^
+Tape  2 has _
+            ^
+[(['A', None, None], <__main__.Transition object at 0x7fd153e2fb80>), (['B', None, None], <__main__.Transition object at 0x7fd153e2fb20>), (['C', None, None], <__main__.Transition object at 0x7fd153e2fac0>), (['_', None, None], <__main__.Transition object at 0x7fd153e2fa60>)]
+The TM is in state 5
+Tape  0 has _ACAAAABAACC
+             ^
+Tape  1 has _
+            ^
+Tape  2 has _
+            ^
+[(['A', None, None], <__main__.Transition object at 0x7fd153e2fb80>), (['B', None, None], <__main__.Transition object at 0x7fd153e2fb20>), (['C', None, None], <__main__.Transition object at 0x7fd153e2fac0>), (['_', None, None], <__main__.Transition object at 0x7fd153e2fa60>)]
+The TM is in state 5
+Tape  0 has _ACAAAABAACC
+            ^
+Tape  1 has _
+            ^
+Tape  2 has _
+            ^
+[(['A', None, None], <__main__.Transition object at 0x7fd153e2fb80>), (['B', None, None], <__main__.Transition object at 0x7fd153e2fb20>), (['C', None, None], <__main__.Transition object at 0x7fd153e2fac0>), (['_', None, None], <__main__.Transition object at 0x7fd153e2fa60>)]
+The TM is in state 6
+Tape  0 has _ACAAAABAACC
+             ^
+Tape  1 has __
+             ^
+Tape  2 has __
+             ^
+[(['A', None, None], <__main__.Transition object at 0x7fd153e2f9a0>), (['B', None, None], <__main__.Transition object at 0x7fd153e2f940>), (['C', None, None], <__main__.Transition object at 0x7fd153e2f8e0>), (['_', None, None], <__main__.Transition object at 0x7fd153e2f880>)]
+The TM is in state 6
+Tape  0 has _ACAAAABAACC
+              ^
+Tape  1 has _1_
+              ^
+Tape  2 has __
+             ^
+[(['A', None, None], <__main__.Transition object at 0x7fd153e2f9a0>), (['B', None, None], <__main__.Transition object at 0x7fd153e2f940>), (['C', None, None], <__main__.Transition object at 0x7fd153e2f8e0>), (['_', None, None], <__main__.Transition object at 0x7fd153e2f880>)]
+The TM is in state 7
+Tape  0 has _ACAAAABAACC
+               ^
+Tape  1 has _1_
+              ^
+Tape  2 has _1_
+              ^
+[([None, None, None], <__main__.Transition object at 0x7fd153e2f7c0>)]
+The TM is in state 6
+Tape  0 has _ACAAAABAACC
+               ^
+Tape  1 has _1_
+              ^
+Tape  2 has _11_
+               ^
+[(['A', None, None], <__main__.Transition object at 0x7fd153e2f9a0>), (['B', None, None], <__main__.Transition object at 0x7fd153e2f940>), (['C', None, None], <__main__.Transition object at 0x7fd153e2f8e0>), (['_', None, None], <__main__.Transition object at 0x7fd153e2f880>)]
+The TM is in state 6
+Tape  0 has _ACAAAABAACC
+                ^
+Tape  1 has _11_
+               ^
+Tape  2 has _11_
+               ^
+[(['A', None, None], <__main__.Transition object at 0x7fd153e2f9a0>), (['B', None, None], <__main__.Transition object at 0x7fd153e2f940>), (['C', None, None], <__main__.Transition object at 0x7fd153e2f8e0>), (['_', None, None], <__main__.Transition object at 0x7fd153e2f880>)]
+The TM is in state 6
+Tape  0 has _ACAAAABAACC
+                 ^
+Tape  1 has _111_
+                ^
+Tape  2 has _11_
+               ^
+[(['A', None, None], <__main__.Transition object at 0x7fd153e2f9a0>), (['B', None, None], <__main__.Transition object at 0x7fd153e2f940>), (['C', None, None], <__main__.Transition object at 0x7fd153e2f8e0>), (['_', None, None], <__main__.Transition object at 0x7fd153e2f880>)]
+The TM is in state 6
+Tape  0 has _ACAAAABAACC
+                  ^
+Tape  1 has _1111_
+                 ^
+Tape  2 has _11_
+               ^
+[(['A', None, None], <__main__.Transition object at 0x7fd153e2f9a0>), (['B', None, None], <__main__.Transition object at 0x7fd153e2f940>), (['C', None, None], <__main__.Transition object at 0x7fd153e2f8e0>), (['_', None, None], <__main__.Transition object at 0x7fd153e2f880>)]
+The TM is in state 6
+Tape  0 has _ACAAAABAACC
+                   ^
+Tape  1 has _11111_
+                  ^
+Tape  2 has _11_
+               ^
+[(['A', None, None], <__main__.Transition object at 0x7fd153e2f9a0>), (['B', None, None], <__main__.Transition object at 0x7fd153e2f940>), (['C', None, None], <__main__.Transition object at 0x7fd153e2f8e0>), (['_', None, None], <__main__.Transition object at 0x7fd153e2f880>)]
+The TM is in state 6
+Tape  0 has _ACAAAABAACC
+                    ^
+Tape  1 has _11111_
+                  ^
+Tape  2 has _111_
+                ^
+[(['A', None, None], <__main__.Transition object at 0x7fd153e2f9a0>), (['B', None, None], <__main__.Transition object at 0x7fd153e2f940>), (['C', None, None], <__main__.Transition object at 0x7fd153e2f8e0>), (['_', None, None], <__main__.Transition object at 0x7fd153e2f880>)]
+The TM is in state 6
+Tape  0 has _ACAAAABAACC
+                     ^
+Tape  1 has _111111_
+                   ^
+Tape  2 has _111_
+                ^
+[(['A', None, None], <__main__.Transition object at 0x7fd153e2f9a0>), (['B', None, None], <__main__.Transition object at 0x7fd153e2f940>), (['C', None, None], <__main__.Transition object at 0x7fd153e2f8e0>), (['_', None, None], <__main__.Transition object at 0x7fd153e2f880>)]
+The TM is in state 6
+Tape  0 has _ACAAAABAACC
+                      ^
+Tape  1 has _1111111_
+                    ^
+Tape  2 has _111_
+                ^
+[(['A', None, None], <__main__.Transition object at 0x7fd153e2f9a0>), (['B', None, None], <__main__.Transition object at 0x7fd153e2f940>), (['C', None, None], <__main__.Transition object at 0x7fd153e2f8e0>), (['_', None, None], <__main__.Transition object at 0x7fd153e2f880>)]
+The TM is in state 7
+Tape  0 has _ACAAAABAACC
+                       ^
+Tape  1 has _1111111_
+                    ^
+Tape  2 has _1111_
+                 ^
+[([None, None, None], <__main__.Transition object at 0x7fd153e2f7c0>)]
+The TM is in state 6
+Tape  0 has _ACAAAABAACC
+                       ^
+Tape  1 has _1111111_
+                    ^
+Tape  2 has _11111_
+                  ^
+[(['A', None, None], <__main__.Transition object at 0x7fd153e2f9a0>), (['B', None, None], <__main__.Transition object at 0x7fd153e2f940>), (['C', None, None], <__main__.Transition object at 0x7fd153e2f8e0>), (['_', None, None], <__main__.Transition object at 0x7fd153e2f880>)]
+The TM is in state 7
+Tape  0 has _ACAAAABAACC_
+                        ^
+Tape  1 has _1111111_
+                    ^
+Tape  2 has _111111_
+                   ^
+[([None, None, None], <__main__.Transition object at 0x7fd153e2f7c0>)]
+The TM is in state 6
+Tape  0 has _ACAAAABAACC_
+                        ^
+Tape  1 has _1111111_
+                    ^
+Tape  2 has _1111111_
+                    ^
+[(['A', None, None], <__main__.Transition object at 0x7fd153e2f9a0>), (['B', None, None], <__main__.Transition object at 0x7fd153e2f940>), (['C', None, None], <__main__.Transition object at 0x7fd153e2f8e0>), (['_', None, None], <__main__.Transition object at 0x7fd153e2f880>)]
+The TM is in state 8
+Tape  0 has _ACAAAABAACC_
+                       ^
+Tape  1 has _1111111_
+                   ^
+Tape  2 has _1111111_
+                   ^
+[([None, '1', '1'], <__main__.Transition object at 0x7fd153e2f700>), ([None, '1', '_'], <__main__.Transition object at 0x7fd153e2f6a0>), ([None, '_', '1'], <__main__.Transition object at 0x7fd153e2f640>), ([None, '_', '_'], <__main__.Transition object at 0x7fd153e2f5e0>)]
+The TM is in state 8
+Tape  0 has _ACAAAABAACC_
+                       ^
+Tape  1 has _1111111_
+                  ^
+Tape  2 has _1111111_
+                  ^
+[([None, '1', '1'], <__main__.Transition object at 0x7fd153e2f700>), ([None, '1', '_'], <__main__.Transition object at 0x7fd153e2f6a0>), ([None, '_', '1'], <__main__.Transition object at 0x7fd153e2f640>), ([None, '_', '_'], <__main__.Transition object at 0x7fd153e2f5e0>)]
+The TM is in state 8
+Tape  0 has _ACAAAABAACC_
+                       ^
+Tape  1 has _1111111_
+                 ^
+Tape  2 has _1111111_
+                 ^
+[([None, '1', '1'], <__main__.Transition object at 0x7fd153e2f700>), ([None, '1', '_'], <__main__.Transition object at 0x7fd153e2f6a0>), ([None, '_', '1'], <__main__.Transition object at 0x7fd153e2f640>), ([None, '_', '_'], <__main__.Transition object at 0x7fd153e2f5e0>)]
+The TM is in state 8
+Tape  0 has _ACAAAABAACC_
+                       ^
+Tape  1 has _1111111_
+                ^
+Tape  2 has _1111111_
+                ^
+[([None, '1', '1'], <__main__.Transition object at 0x7fd153e2f700>), ([None, '1', '_'], <__main__.Transition object at 0x7fd153e2f6a0>), ([None, '_', '1'], <__main__.Transition object at 0x7fd153e2f640>), ([None, '_', '_'], <__main__.Transition object at 0x7fd153e2f5e0>)]
+The TM is in state 8
+Tape  0 has _ACAAAABAACC_
+                       ^
+Tape  1 has _1111111_
+               ^
+Tape  2 has _1111111_
+               ^
+[([None, '1', '1'], <__main__.Transition object at 0x7fd153e2f700>), ([None, '1', '_'], <__main__.Transition object at 0x7fd153e2f6a0>), ([None, '_', '1'], <__main__.Transition object at 0x7fd153e2f640>), ([None, '_', '_'], <__main__.Transition object at 0x7fd153e2f5e0>)]
+The TM is in state 8
+Tape  0 has _ACAAAABAACC_
+                       ^
+Tape  1 has _1111111_
+              ^
+Tape  2 has _1111111_
+              ^
+[([None, '1', '1'], <__main__.Transition object at 0x7fd153e2f700>), ([None, '1', '_'], <__main__.Transition object at 0x7fd153e2f6a0>), ([None, '_', '1'], <__main__.Transition object at 0x7fd153e2f640>), ([None, '_', '_'], <__main__.Transition object at 0x7fd153e2f5e0>)]
+The TM is in state 8
+Tape  0 has _ACAAAABAACC_
+                       ^
+Tape  1 has _1111111_
+             ^
+Tape  2 has _1111111_
+             ^
+[([None, '1', '1'], <__main__.Transition object at 0x7fd153e2f700>), ([None, '1', '_'], <__main__.Transition object at 0x7fd153e2f6a0>), ([None, '_', '1'], <__main__.Transition object at 0x7fd153e2f640>), ([None, '_', '_'], <__main__.Transition object at 0x7fd153e2f5e0>)]
+The TM is in state 8
+Tape  0 has _ACAAAABAACC_
+                       ^
+Tape  1 has _1111111_
+            ^
+Tape  2 has _1111111_
+            ^
+[([None, '1', '1'], <__main__.Transition object at 0x7fd153e2f700>), ([None, '1', '_'], <__main__.Transition object at 0x7fd153e2f6a0>), ([None, '_', '1'], <__main__.Transition object at 0x7fd153e2f640>), ([None, '_', '_'], <__main__.Transition object at 0x7fd153e2f5e0>)]
+The TM is in state 9
+Tape  0 has _ACAAAABAACC_
+                       ^
+Tape  1 has _1111111_
+            ^
+Tape  2 has _1111111_
+            ^
+Answer: True

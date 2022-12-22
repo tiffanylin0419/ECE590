@@ -1,0 +1,405 @@
+A Turing Machine with 3 tapes and blank char _
+State 0: 
+{ [None, None, None] =>  1 [S , R_, R_]
+}
+State 1: 
+{ ['A', None, None] =>  1 [R , RA, S ]
+  ['B', None, None] =>  1 [R , RB, S ]
+  ['C', None, None] =>  1 [R , RC, S ]
+  ['_', None, None] =>  2 [S , L , S ]
+}
+State 2: 
+{ [None, 'A', None] =>  2 [S , L , S ]
+  [None, 'B', None] =>  2 [S , L , S ]
+  [None, 'C', None] =>  2 [S , L , S ]
+  [None, '_', None] =>  3 [S , R , S ]
+}
+State 3: 
+{ [None, 'A', None] =>  3 [S , R , RX]
+  [None, 'B', None] =>  3 [S , R , S ]
+  [None, 'C', None] =>  3 [S , R , S ]
+  [None, '_', None] =>  4 [S , L , L ]
+}
+State 4: 
+{ [None, 'B', 'X'] =>  4 [S , L , L_]
+  [None, 'C', 'X'] =>  5 [S , L , L_]
+  [None, 'A', None] =>  4 [S , L , S ]
+  [None, '_', '_'] =>  6 [S , S , S ]
+}
+State 5: 
+{ [None, None, 'X'] =>  4 [S , S , L_]
+}
+State 6: 
+Accept
+The TM is in state 0
+Tape  0 has ACAAAABAACC
+            ^
+Tape  1 has _
+            ^
+Tape  2 has _
+            ^
+The TM is in state 1
+Tape  0 has ACAAAABAACC
+            ^
+Tape  1 has __
+             ^
+Tape  2 has __
+             ^
+The TM is in state 1
+Tape  0 has ACAAAABAACC
+             ^
+Tape  1 has _A_
+              ^
+Tape  2 has __
+             ^
+The TM is in state 1
+Tape  0 has ACAAAABAACC
+              ^
+Tape  1 has _AC_
+               ^
+Tape  2 has __
+             ^
+The TM is in state 1
+Tape  0 has ACAAAABAACC
+               ^
+Tape  1 has _ACA_
+                ^
+Tape  2 has __
+             ^
+The TM is in state 1
+Tape  0 has ACAAAABAACC
+                ^
+Tape  1 has _ACAA_
+                 ^
+Tape  2 has __
+             ^
+The TM is in state 1
+Tape  0 has ACAAAABAACC
+                 ^
+Tape  1 has _ACAAA_
+                  ^
+Tape  2 has __
+             ^
+The TM is in state 1
+Tape  0 has ACAAAABAACC
+                  ^
+Tape  1 has _ACAAAA_
+                   ^
+Tape  2 has __
+             ^
+The TM is in state 1
+Tape  0 has ACAAAABAACC
+                   ^
+Tape  1 has _ACAAAAB_
+                    ^
+Tape  2 has __
+             ^
+The TM is in state 1
+Tape  0 has ACAAAABAACC
+                    ^
+Tape  1 has _ACAAAABA_
+                     ^
+Tape  2 has __
+             ^
+The TM is in state 1
+Tape  0 has ACAAAABAACC
+                     ^
+Tape  1 has _ACAAAABAA_
+                      ^
+Tape  2 has __
+             ^
+The TM is in state 1
+Tape  0 has ACAAAABAACC
+                      ^
+Tape  1 has _ACAAAABAAC_
+                       ^
+Tape  2 has __
+             ^
+The TM is in state 1
+Tape  0 has ACAAAABAACC_
+                       ^
+Tape  1 has _ACAAAABAACC_
+                        ^
+Tape  2 has __
+             ^
+The TM is in state 2
+Tape  0 has ACAAAABAACC_
+                       ^
+Tape  1 has _ACAAAABAACC_
+                       ^
+Tape  2 has __
+             ^
+The TM is in state 2
+Tape  0 has ACAAAABAACC_
+                       ^
+Tape  1 has _ACAAAABAACC_
+                      ^
+Tape  2 has __
+             ^
+The TM is in state 2
+Tape  0 has ACAAAABAACC_
+                       ^
+Tape  1 has _ACAAAABAACC_
+                     ^
+Tape  2 has __
+             ^
+The TM is in state 2
+Tape  0 has ACAAAABAACC_
+                       ^
+Tape  1 has _ACAAAABAACC_
+                    ^
+Tape  2 has __
+             ^
+The TM is in state 2
+Tape  0 has ACAAAABAACC_
+                       ^
+Tape  1 has _ACAAAABAACC_
+                   ^
+Tape  2 has __
+             ^
+The TM is in state 2
+Tape  0 has ACAAAABAACC_
+                       ^
+Tape  1 has _ACAAAABAACC_
+                  ^
+Tape  2 has __
+             ^
+The TM is in state 2
+Tape  0 has ACAAAABAACC_
+                       ^
+Tape  1 has _ACAAAABAACC_
+                 ^
+Tape  2 has __
+             ^
+The TM is in state 2
+Tape  0 has ACAAAABAACC_
+                       ^
+Tape  1 has _ACAAAABAACC_
+                ^
+Tape  2 has __
+             ^
+The TM is in state 2
+Tape  0 has ACAAAABAACC_
+                       ^
+Tape  1 has _ACAAAABAACC_
+               ^
+Tape  2 has __
+             ^
+The TM is in state 2
+Tape  0 has ACAAAABAACC_
+                       ^
+Tape  1 has _ACAAAABAACC_
+              ^
+Tape  2 has __
+             ^
+The TM is in state 2
+Tape  0 has ACAAAABAACC_
+                       ^
+Tape  1 has _ACAAAABAACC_
+             ^
+Tape  2 has __
+             ^
+The TM is in state 2
+Tape  0 has ACAAAABAACC_
+                       ^
+Tape  1 has _ACAAAABAACC_
+            ^
+Tape  2 has __
+             ^
+The TM is in state 3
+Tape  0 has ACAAAABAACC_
+                       ^
+Tape  1 has _ACAAAABAACC_
+             ^
+Tape  2 has __
+             ^
+The TM is in state 3
+Tape  0 has ACAAAABAACC_
+                       ^
+Tape  1 has _ACAAAABAACC_
+              ^
+Tape  2 has _X_
+              ^
+The TM is in state 3
+Tape  0 has ACAAAABAACC_
+                       ^
+Tape  1 has _ACAAAABAACC_
+               ^
+Tape  2 has _X_
+              ^
+The TM is in state 3
+Tape  0 has ACAAAABAACC_
+                       ^
+Tape  1 has _ACAAAABAACC_
+                ^
+Tape  2 has _XX_
+               ^
+The TM is in state 3
+Tape  0 has ACAAAABAACC_
+                       ^
+Tape  1 has _ACAAAABAACC_
+                 ^
+Tape  2 has _XXX_
+                ^
+The TM is in state 3
+Tape  0 has ACAAAABAACC_
+                       ^
+Tape  1 has _ACAAAABAACC_
+                  ^
+Tape  2 has _XXXX_
+                 ^
+The TM is in state 3
+Tape  0 has ACAAAABAACC_
+                       ^
+Tape  1 has _ACAAAABAACC_
+                   ^
+Tape  2 has _XXXXX_
+                  ^
+The TM is in state 3
+Tape  0 has ACAAAABAACC_
+                       ^
+Tape  1 has _ACAAAABAACC_
+                    ^
+Tape  2 has _XXXXX_
+                  ^
+The TM is in state 3
+Tape  0 has ACAAAABAACC_
+                       ^
+Tape  1 has _ACAAAABAACC_
+                     ^
+Tape  2 has _XXXXXX_
+                   ^
+The TM is in state 3
+Tape  0 has ACAAAABAACC_
+                       ^
+Tape  1 has _ACAAAABAACC_
+                      ^
+Tape  2 has _XXXXXXX_
+                    ^
+The TM is in state 3
+Tape  0 has ACAAAABAACC_
+                       ^
+Tape  1 has _ACAAAABAACC_
+                       ^
+Tape  2 has _XXXXXXX_
+                    ^
+The TM is in state 3
+Tape  0 has ACAAAABAACC_
+                       ^
+Tape  1 has _ACAAAABAACC_
+                        ^
+Tape  2 has _XXXXXXX_
+                    ^
+The TM is in state 4
+Tape  0 has ACAAAABAACC_
+                       ^
+Tape  1 has _ACAAAABAACC_
+                       ^
+Tape  2 has _XXXXXXX_
+                   ^
+The TM is in state 5
+Tape  0 has ACAAAABAACC_
+                       ^
+Tape  1 has _ACAAAABAACC_
+                      ^
+Tape  2 has _XXXXXX__
+                  ^
+The TM is in state 4
+Tape  0 has ACAAAABAACC_
+                       ^
+Tape  1 has _ACAAAABAACC_
+                      ^
+Tape  2 has _XXXXX___
+                 ^
+The TM is in state 5
+Tape  0 has ACAAAABAACC_
+                       ^
+Tape  1 has _ACAAAABAACC_
+                     ^
+Tape  2 has _XXXX____
+                ^
+The TM is in state 4
+Tape  0 has ACAAAABAACC_
+                       ^
+Tape  1 has _ACAAAABAACC_
+                     ^
+Tape  2 has _XXX_____
+               ^
+The TM is in state 4
+Tape  0 has ACAAAABAACC_
+                       ^
+Tape  1 has _ACAAAABAACC_
+                    ^
+Tape  2 has _XXX_____
+               ^
+The TM is in state 4
+Tape  0 has ACAAAABAACC_
+                       ^
+Tape  1 has _ACAAAABAACC_
+                   ^
+Tape  2 has _XXX_____
+               ^
+The TM is in state 4
+Tape  0 has ACAAAABAACC_
+                       ^
+Tape  1 has _ACAAAABAACC_
+                  ^
+Tape  2 has _XX______
+              ^
+The TM is in state 4
+Tape  0 has ACAAAABAACC_
+                       ^
+Tape  1 has _ACAAAABAACC_
+                 ^
+Tape  2 has _XX______
+              ^
+The TM is in state 4
+Tape  0 has ACAAAABAACC_
+                       ^
+Tape  1 has _ACAAAABAACC_
+                ^
+Tape  2 has _XX______
+              ^
+The TM is in state 4
+Tape  0 has ACAAAABAACC_
+                       ^
+Tape  1 has _ACAAAABAACC_
+               ^
+Tape  2 has _XX______
+              ^
+The TM is in state 4
+Tape  0 has ACAAAABAACC_
+                       ^
+Tape  1 has _ACAAAABAACC_
+              ^
+Tape  2 has _XX______
+              ^
+The TM is in state 5
+Tape  0 has ACAAAABAACC_
+                       ^
+Tape  1 has _ACAAAABAACC_
+             ^
+Tape  2 has _X_______
+             ^
+The TM is in state 4
+Tape  0 has ACAAAABAACC_
+                       ^
+Tape  1 has _ACAAAABAACC_
+             ^
+Tape  2 has _________
+            ^
+The TM is in state 4
+Tape  0 has ACAAAABAACC_
+                       ^
+Tape  1 has _ACAAAABAACC_
+            ^
+Tape  2 has _________
+            ^
+The TM is in state 6
+Tape  0 has ACAAAABAACC_
+                       ^
+Tape  1 has _ACAAAABAACC_
+            ^
+Tape  2 has _________
+            ^
+Answer: True
